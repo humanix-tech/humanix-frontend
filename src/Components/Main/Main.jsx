@@ -1,6 +1,14 @@
 import React from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper/modules";
+
 
 export default function Main() {
+  const techImages = [
+    'node.png','rails.png','react.png','js.png','java.png','net_logo.svg.png','angular.png','python.png'];
+
   return (
   <div id="content" className="site-content">
     <section className="banner big-padding-top bg-banner-gradient particles-js" data-color="#ffffff, #00c3ff, #fe4c1c" data-id="i1">
@@ -14,8 +22,7 @@ export default function Main() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              <h6 className="banner-title m-b0">GET YOUR DREAM JOB</h6>
-              <h2 className="banner-stitle m-b55 xs-m-b40">Hire Developers,<br />Best Training <br />& <br /><span className="text-second">Placement</span></h2>
+              <h2 className="banner-stitle m-b55 xs-m-b40">Hire On Demand Developers<br></br><span className="text-second">Whatever your requirements we’ll connect you with the perfect candidates to drive your business forward.</span></h2>
               <div className="wpcf7 lead">
                 <div className="screen-reader-response"></div>
                 <form action="resources/functions/lead-form-process.php" method="POST" className="lead-form wpcf7-form">
@@ -41,14 +48,14 @@ export default function Main() {
         </div>
       </div>
     </section>
-
+{/* 
     <section className="about-home bg-light">
       <div className="container">
         <div className="about-home-img text-center">
           <img src={`${process.env.PUBLIC_URL}/resources/images/topimg-home1.png`} alt="ProSkillHub" />
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section className="seo-about p-b30">
       <div className="shape shape-bottom" data-negative="false">
@@ -66,8 +73,8 @@ export default function Main() {
                 <div className="bg-after" style={{ background: `url(${process.env.PUBLIC_URL}/resources/images/bg2-box.png) bottom right no-repeat #fff` }}></div>
                 <div className="icon-main"> <span className="flaticon-startup"></span> </div>
                 <div className="content-box">
-                  <h5>Awesome Results</h5>
-                  <p>We have seen great successes with everyone companies.</p>
+                  <h5>IT Consulting</h5>
+                  <p>Humanix Technologies streamline complexity to deliver digital success, helping you achieve cost savings of 70-75%.</p>
                 </div>
               </div>
             </div>
@@ -79,8 +86,8 @@ export default function Main() {
                 <div className="bg-after" style={{ background: `url(${process.env.PUBLIC_URL}/resources/images/bg2-box2.png) bottom right no-repeat #fff` }}></div>
                 <div className="icon-main"> <span className="flaticon-system"></span> </div>
                 <div className="content-box">
-                  <h5>100% Placement</h5>
-                  <p>We assure 100% placement Guarantee.</p>
+                  <h5>Permanent Staffing</h5>
+                  <p>With a talent pool of over 2,000 top-tier professionals and expertise across diverse technologies, we ensure recruitment in a short timeframe.</p>
                 </div>
               </div>
             </div>
@@ -92,8 +99,9 @@ export default function Main() {
                 <div className="bg-after" style={{ background: `url(${process.env.PUBLIC_URL}/resources/images/bg2-box3.png) bottom left no-repeat #fff` }}></div>
                 <div className="icon-main"> <span className="flaticon-internet"></span> </div>
                 <div className="content-box">
-                  <h5>Top Faculties</h5>
-                  <p>We have Industry expert faculty to guide you.</p>
+                  <h5>Temporary Staffing</h5>
+                  <p>
+                  Over 1,000+ skilled professionals, swift short-term placements, 100% data security, and immediate processing.</p>
                 </div>
               </div>
             </div>
@@ -105,8 +113,8 @@ export default function Main() {
                 <div className="bg-after"></div>
                 <div className="icon-main"> <span className="flaticon-report"></span> </div>
                 <div className="content-box">
-                  <h5>200+ Companies</h5>
-                  <p>We have partnered with over 200+ MNCs and startups in India.</p>
+                  <h5>Staff Augmentation</h5>
+                  <p>Fast and efficient, 100% personalized, and completely adaptable.</p>
                 </div>
               </div>
             </div>
@@ -114,7 +122,7 @@ export default function Main() {
         </div>
       </div>
     </section>
-    
+{/*     
     <section className="container">
         <div className="row p-b40">
           <div className="col-sm-8 xs-m-b40">
@@ -169,13 +177,13 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
       <section className="p-t35 p-b90 xs-p-t60 xs-p-b60 bg-about">
         <div className="container">
           <div className="ot-heading">
             <h6><span>About Us</span></h6>
-            <h2 className="main-heading">About Pro Skill Hub</h2>
+            <h2 className="main-heading">About Humanix Technologies</h2>
           </div>
 
           <div className="row flex-row">
@@ -184,11 +192,14 @@ export default function Main() {
             </div>
             <div className="col-lg-6 col-md-12 col-xs-12 p-l95 xs-p-l15 p-r0 xs-p-r15 align-self-center">
               <div className="ot-heading left-align">
-                <h2 className="main-heading m-b20">Grow Your Career<br /> with Pro Skill Hub</h2>
+                <h2 className="main-heading m-b20">Grow with Humanix</h2>
               </div>
-              <p className="font22 text-dark">Over 10+ years Pro Skill Hub helping students to reach their dream jobs.</p>
               <p className="m-b0 p-b45">
-                Over the years, we have worked with Fortune 200s and Top Indian Startups. We help ambitious students and professionals like yours to grab their dream jobs and be placed in India's top startups and MNCs. For more info call us.
+              With exceptional analytical, strategic, and technical expertise, Humanix technologies offers talented on-demand developers who bring your ideas to life. Our developers and HR professionals quickly grasp your unique requirements and collaborate closely with your in-house team to ensure excellence at every stage. Having worked with a diverse portfolio, Codersbrain allows you the freedom to choose the best-fit resources by evaluating their skills and expertise to meet your specific needs.
+              </p>
+              <p className="font22 text-dark">We focus on strong partnerships built with Trust, Honesty, Collaboration and Transparency.</p>
+              <p className="m-b0 p-b45">
+              Humanix Technologies prioritizes client needs, consistently aiming to not only meet but exceed expectations. We continuously assess our current initiatives to inform future strategies, proactively anticipating and addressing client requirements before they emerge.
               </p>
               <div className="ot-button">
                 <a href="about-us.html" className="octf-btn octf-btn-secondary octf-btn-icon">
@@ -200,9 +211,26 @@ export default function Main() {
         </div>
       </section>
 
+      
       <section>
         <div className="container">
           <div className="row">
+          <Swiper
+        slidesPerView={6} // Number of slides visible at a time
+        spaceBetween={10} // Space between slides
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        modules={[ Autoplay]} // Removed Navigation module
+        breakpoints={{
+          1024: { slidesPerView: 6 },
+          768: { slidesPerView: 4 },
+          640: { slidesPerView: 2 },
+        }}
+        className="partner-slider" 
+      >
             <div className="col-md-12">
               <div className="partners">
                 <div className="owl-carousel home-client-carousel">
@@ -210,6 +238,7 @@ export default function Main() {
                     'zoomcar-4.webp', 'zoomcar-10.webp', 'zoomcar-8.webp', 'zoomcar-6.webp', 'zoomcar-17.webp',
                     'cred.webp', 'delhiberry.webp', 'meeso.webp', 'paytm.webp', 'upgrad.webp', 'rakuten.png', 'delhiberry.webp'
                   ].map((logo, index) => (
+                    <SwiperSlide key={index} className='mt-5'>
                     <div className="partners-slide" key={index}>
                       <a href="#" className="client-logo">
                         <figure className="partners-slide-inner">
@@ -217,10 +246,12 @@ export default function Main() {
                         </figure>
                       </a>
                     </div>
+                    </SwiperSlide>
                   ))}
                 </div>
               </div>
             </div>
+            </Swiper >
           </div>
         </div>
       </section>
@@ -228,68 +259,40 @@ export default function Main() {
       <section className="p-b330">
     <div className="container">
         <div className="row">
+        <Swiper
+        slidesPerView={6} // Number of slides visible at a time
+        spaceBetween={10} // Space between slides
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        modules={[ Autoplay]} // Removed Navigation module
+        breakpoints={{
+          1024: { slidesPerView: 6 },
+          768: { slidesPerView: 4 },
+          640: { slidesPerView: 2 },
+        }}
+        className="team-slider" 
+      >
             <div className="col-md-12">
                 <div className="partners">
                     <div className="owl-carousel home-client-carousel">
-                        <div className="partners-slide">
+                      {techImages.map((logo, index) =>  (
+                        <SwiperSlide key={index} className='mt-5'>
+                        <div className="partners-slide " key={index}>
                             <a href="#" className="client-logo">
                                 <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/rails.png" alt="" />
+                                    <img className="partners-slide-image technology-img" src={`resources/images/brands/${logo}`} alt="" />
                                 </figure>
                             </a>
                         </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/react.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/js.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/java.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/net_logo.svg.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/angular.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/python.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div className="partners-slide">
-                            <a href="#" className="client-logo">
-                                <figure className="partners-slide-inner">
-                                    <img className="partners-slide-image technology-img" src="resources/images/brands/node.png" alt="" />
-                                </figure>
-                            </a>
-                        </div>
+                        </SwiperSlide>
+                      ))}
                     </div>
                 </div>
             </div>
+            </Swiper >
         </div>
     </div>
 </section>
@@ -303,12 +306,9 @@ export default function Main() {
                     <div className="content-box">
                         <h5>Frontend Developer</h5>
                         <div>
-                            <span><i className="fa-solid fa-wallet"></i> Upto 8 LPA </span>
+                            <span><i className="fa-solid fa-briefcase"></i> 200+ Developers </span>
                         </div>
-                        <div>
-                            <span><i className="fa-solid fa-briefcase"></i> 200+ Jobs </span>
-                        </div>
-                        <a href="frontend-development.html" className="octf-btn octf-btn-icon octf-btn-primary">View Course <i className="flaticon-right-arrow-1"></i></a>
+                        <a href="frontend-development.html" className="octf-btn octf-btn-icon octf-btn-primary">View Profiles <i className="flaticon-right-arrow-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -318,12 +318,9 @@ export default function Main() {
                     <div className="content-box">
                         <h5>Backend Developer</h5>
                         <div>
-                            <span><i className="fa-solid fa-wallet"></i> Upto 8 LPA </span>
+                            <span><i className="fa-solid fa-briefcase"></i> 150+ Developers </span>
                         </div>
-                        <div>
-                            <span><i className="fa-solid fa-briefcase"></i> 150+ Jobs </span>
-                        </div>
-                        <a href="backend-development.html" className="octf-btn octf-btn-icon octf-btn-primary">View Course <i className="flaticon-right-arrow-1"></i></a>
+                        <a href="backend-development.html" className="octf-btn octf-btn-icon octf-btn-primary">View Profiles <i className="flaticon-right-arrow-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -333,12 +330,9 @@ export default function Main() {
                     <div className="content-box">
                         <h5>Full stack Developer</h5>
                         <div>
-                            <span><i className="fa-solid fa-wallet"></i> Upto 12 LPA </span>
+                            <span><i className="fa-solid fa-briefcase"></i> 250+ Developers </span>
                         </div>
-                        <div>
-                            <span><i className="fa-solid fa-briefcase"></i> 250+ Jobs </span>
-                        </div>
-                        <a href="full-stack-developer.html" className="octf-btn octf-btn-icon octf-btn-primary">View Course <i className="flaticon-right-arrow-1"></i></a>
+                        <a href="full-stack-developer.html" className="octf-btn octf-btn-icon octf-btn-primary">View Profiles <i className="flaticon-right-arrow-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -348,12 +342,9 @@ export default function Main() {
                     <div className="content-box">
                         <h5>Data Science</h5>
                         <div>
-                            <span><i className="fa-solid fa-wallet"></i> Upto 08 LPA </span>
+                            <span><i className="fa-solid fa-briefcase"></i> 100+ Developers </span>
                         </div>
-                        <div>
-                            <span><i className="fa-solid fa-briefcase"></i> 100+ Jobs </span>
-                        </div>
-                        <a href="data-science.html" className="octf-btn octf-btn-icon octf-btn-primary">View Course <i className="flaticon-right-arrow-1"></i></a>
+                        <a href="data-science.html" className="octf-btn octf-btn-icon octf-btn-primary">View Profiles <i className="flaticon-right-arrow-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -361,14 +352,11 @@ export default function Main() {
                 <div className="icon-box">
                     <div className="icon-main"> <span className="flaticon-coding"></span> </div>
                     <div className="content-box">
-                        <h5>Business Development</h5>
+                        <h5>Data Engineer</h5>
                         <div>
-                            <span><i className="fa-solid fa-wallet"></i> Upto 8 LPA </span>
+                            <span><i className="fa-solid fa-briefcase"></i> 150+ Developers </span>
                         </div>
-                        <div>
-                            <span><i className="fa-solid fa-briefcase"></i> 150+ Jobs </span>
-                        </div>
-                        <a href="business-development.html" className="octf-btn octf-btn-icon octf-btn-primary">View Course <i className="flaticon-right-arrow-1"></i></a>
+                        <a href="business-development.html" className="octf-btn octf-btn-icon octf-btn-primary">View Profiles <i className="flaticon-right-arrow-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -376,21 +364,18 @@ export default function Main() {
                 <div className="icon-box">
                     <div className="icon-main"> <span className="flaticon-cloud-computing"></span> </div>
                     <div className="content-box">
-                        <h5>Digital Marketing</h5>
+                        <h5>DevOps</h5>
                         <div>
-                            <span><i className="fa-solid fa-wallet"></i> Upto 16 LPA </span>
+                            <span><i className="fa-solid fa-briefcase"></i> 150+ Developers </span>
                         </div>
-                        <div>
-                            <span><i className="fa-solid fa-briefcase"></i> 180+ Jobs </span>
-                        </div>
-                        <a href="digital-marketing.html" className="octf-btn octf-btn-icon octf-btn-primary">View Course <i className="flaticon-right-arrow-1"></i></a>
+                        <a href="digital-marketing.html" className="octf-btn octf-btn-icon octf-btn-primary">View Profiles <i className="flaticon-right-arrow-1"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section className="p-b180 p-t120">
+{/* <section className="p-b180 p-t120">
     <div className="container">
         <h2 className="main-heading">Our Selected Candidates</h2>
         <div className="row">
@@ -426,8 +411,8 @@ export default function Main() {
             </div>
         </div>
     </div>
-</section>
-<section className="bg-dark text-light p-b130">
+</section> */}
+{/* <section className="bg-dark text-light p-b130">
     <div className="container">
         <div className="row">
             <div className="col-md-12">
@@ -438,63 +423,76 @@ export default function Main() {
             </div>
         </div>
     </div>
-</section>
-
+</section> */}
 <section className="p-t80 bg-testi">
     <div className="bg-overlay-testi"></div>
     <div className="container">
-        <div className="flex-row">
+        <div className="row">
             <div className="col-md-4 col-xs-12 align-self-center">
                 <div className="ot-heading heading-testimonials left-align">
                     <h6><span>Testimonials</span></h6>
                     <h2 className="main-heading">What They<br />Say About Our<br />Company?</h2>
                 </div>
-                <div className="testicustom-slider-nav"></div>
             </div>
-            <div className="col-md-8 col-xs-12 ot-testimonials-heading">
-                <div className="ot-testimonials">
-                    <div className="testimonial-wrap">
-                        <div className="testimonial-inner ot-testimonials-slider">
-                            <div>
-                                <img src="resources/images/students/icon-l-1.jpg" alt="Divya Gupta" />
-                                <div className="ttext"> Proskillhub is revolutionizing the job market by providing the
-                                    right candidates to the right companies with the help of super-comprehensive
-                                    courses. You do not need a degree or a certificate to get a job, you just need to
-                                    upscale your skills and you can assure yourself a better job. </div>
-                                <div className="tinfo">
-                                    <h6>Gourav Sengar</h6>
-                                    <span>RoR Developer</span>
-                                </div>
+            <div className="col-md-8 col-xs-12">
+                <Swiper
+                    slidesPerView={1} // Only one slide visible at a time
+                    spaceBetween={10} // Space between slides
+                    loop={true}
+                    autoplay={{
+                        delay: 3000, // Delay between slide transitions
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay]} // Import Autoplay module
+                    className="ot-testimonials-slider"
+                >
+                    <SwiperSlide>
+                        <div className="testimonial-inner">
+                            <div className="ttext">
+                                Humanix Tehnologies is revolutionizing the job market by providing the right candidates to
+                                the right companies with the help of super-comprehensive courses. You do not need
+                                a degree or a certificate to get a job, you just need to upscale your skills and
+                                you can assure yourself a better job.
                             </div>
-                            <div>
-                                <img src="resources/images/students/icon-l-2.jpg" alt="Emilia Clarke" />
-                                <div className="ttext"> Proskillhub is one of the best organizations to work with growth
-                                    opportunities, friendly work culture, helpful peers, and motivating leaders!! </div>
-                                <div className="tinfo">
-                                    <h6>Sulekha Awasthi</h6>
-                                    <span>Manager</span>
-                                </div>
-                            </div>
-                            <div>
-                                <img src="resources/images/students/pic-17.png" alt="Cristian Torres" />
-                                <div className="ttext"> Proskillhub is helping to make India better by educating the
-                                    #techskills every student needs in today's time. I had an astonishing experience
-                                    there. Totally recommend it for anybody who is enthusiastic about programming or wishes
-                                    to pursue software development or wants to learn something awesome and applicable
-                                    which will help make a great living! </div>
-                                <div className="tinfo">
-                                    <h6>Rohit Sinha</h6>
-                                    <span>Designer</span>
-                                </div>
+                            <div className="tinfo">
+                                <h6>Gourav Sengar</h6>
+                                <span>RoR Developer</span>
                             </div>
                         </div>
-                        <div className="bg-block"></div>
-                    </div>
-                </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="testimonial-inner">
+                            <div className="ttext">
+                                Humanix Tehnologies is one of the best organizations to work with growth opportunities,
+                                friendly work culture, helpful peers, and motivating leaders!!
+                            </div>
+                            <div className="tinfo">
+                                <h6>Sulekha Awasthi</h6>
+                                <span>Manager</span>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="testimonial-inner">
+                            <div className="ttext">
+                                Humanix Tehnologies is helping to make India better by educating the #techskills every
+                                student needs in today's time. I had an astonishing experience there. Totally
+                                recommend it for anybody who is enthusiastic about programming or wishes to pursue
+                                software development or wants to learn something awesome and applicable which will
+                                help make a great living!
+                            </div>
+                            <div className="tinfo">
+                                <h6>Rohit Sinha</h6>
+                                <span>Designer</span>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </div>
     </div>
 </section>
+
 
 <section className="p-t330 p-b210 cta bg-cta particles-js" data-color="#fe4c1c,#00c3ff,#0160e7" data-id="i1-1">
     <div className="bg-overlay opacity-1"></div>
@@ -505,13 +503,13 @@ export default function Main() {
     </div>
     <div className="container">
         <div className="cta-content text-center">
-            <h2 className="m-b20">Take Your Career to Next<br />Level Right Now!</h2>
-            <p className="m-b35">Make the Right Choice for Your Future. Choose ProSkillHub!</p>
+            <h2 className="m-b20">Take Your Hiring to Next<br />Level Right Now!</h2>
+            <p className="m-b35">Make the Right Choice for Your Future. Choose Humanix Technologies!</p>
             <div className="ot-button">
                 <a href="contact.html" className="octf-btn octf-btn-primary octf-btn-icon"><span>Start Now<i className="flaticon-right-arrow-1"></i></span></a>
             </div>
 
-            <h4 className="developer-section-content">Hire Experienced 50+ developers for your project.</h4>
+            <h4 className="developer-section-content">Hire 10+ Years Experienced Developer for your project.</h4>
 
             <div className="wpcf7 lead">
                 <div className="screen-reader-response"></div>

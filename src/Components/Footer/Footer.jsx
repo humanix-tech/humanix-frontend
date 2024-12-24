@@ -11,20 +11,20 @@ export default function Footer() {
     </div>
     <div className="container">
         <div className="footer-logo text-center">
-            <img src="resources/images/core/logo.png" className="attachment-large size-large" alt="" />
+            <img src="resources/images/core/humanix-logo.png" className="attachment-large size-large" alt="" />
         </div>
         <div className="flex-col">
             <div className="ft-col-contact text-center">
                 <div className="contact-info box-style2 text-light">
                     <div className="box-icon"><i className="flaticon-world"></i></div>
-                    <p>John Tower Rewa, Madhya Pradesh 486001</p>
+                    <p>Shalimar sawam 6th Floor Indore (MP)</p>
                     <h6>Our Address</h6>
                 </div>
             </div>
             <div className="ft-col-contact text-center border-left border-right">
                 <div className="contact-info box-style2 text-light">
                     <div className="box-icon"><i className="flaticon-note"></i></div>
-                    <p><a href="mailto:info@proskillhub.com">info@proskillhub.com</a></p>
+                    <p><a href="mailto:info@proskillhub.com">info@humanixtechnologies.com</a></p>
                     <h6>Email</h6>
                 </div>
             </div>

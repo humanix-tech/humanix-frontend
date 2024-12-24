@@ -284,8 +284,11 @@ big {
     color: #fe4c1c;
 }
 .text-second {
-    color: #00c3ff;
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: white;
+    line-height: .1;
+    text-align: justify;
 }
 .text-third {
     color: #0160e7;
@@ -1904,8 +1907,15 @@ a:hover, a:active {
     line-height: 1;
 }
 #site-logo img {
-    width: 124px;
+    width: 216px;
 }
+
+.footer-logo img {
+    width: 30%; /* Adjust as needed (e.g., 30%, 200px, etc.) */
+    max-width: 100%; /* Ensures it doesn't exceed its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
 #site-logo img.logo-static {
     display: block;
 }

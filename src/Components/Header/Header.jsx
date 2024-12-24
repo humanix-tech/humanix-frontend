@@ -16,12 +16,12 @@ export default function Header() {
                 <Link to="/">
                   <img
                     className="logo-static"
-                    src={`${process.env.PUBLIC_URL}/resources/images/core/logo-dark.png`}
+                    src={`${process.env.PUBLIC_URL}/resources/images/core/humanix-logo.png`}
                     alt="Proskillhub"
                   />
                   <img
                     className="logo-scroll"
-                    src={`${process.env.PUBLIC_URL}/resources/images/core/logo.png`}
+                    src={`${process.env.PUBLIC_URL}/resources/images/core/humanix-logo.png`}
                     alt="Proskillhub"
                   />
                 </Link>
@@ -33,16 +33,12 @@ export default function Header() {
                   <li className="current-menu-item"><Link to="/">Home</Link></li>
                   <li><Link to="/about">About Us</Link></li>
                   <li className="menu-item-has-children">
-                    <Link to="#">Courses</Link>
+                    <Link to="#">Services</Link>
                     <ul className="sub-menu">
-                      <li><Link to="/frontend-development">Frontend Development</Link></li>
-                      <li><Link to="/backend-development">Backend Development</Link></li>
-                      <li><Link to="/full-stack-developer">Full Stack Developer</Link></li>
-                      <li><Link to="/data-science">Data Science</Link></li>
-                      <li><Link to="/business-development">Business Development</Link></li>
-                      <li><Link to="/digital-marketing">Digital Marketing</Link></li>
-                      <li><Link to="/interview-preparation">Interview Preparation</Link></li>
-                      <li><Link to="/soft-skills">Soft Skills</Link></li>
+                      <li><Link to="/frontend-development">IT Consulting</Link></li>
+                      <li><Link to="/backend-development">IT Staffing(Permanent)</Link></li>
+                      <li><Link to="/full-stack-developer">IT Staffing(Temporary)</Link></li>
+                      <li><Link to="/data-science">Staff Argumentaion</Link></li>
                     </ul>
                   </li>
                   <li className="menu-item-has-children">
