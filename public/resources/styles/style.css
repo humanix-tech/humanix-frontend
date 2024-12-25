@@ -2627,8 +2627,12 @@ a:hover, a:active {
         padding: 10px 0px;
     }
     .header_mobile .mlogo_wrapper img {
-        height: 28px;
+        height: 70px;
         
+    }
+    .text-second{
+        font-size: 15px;
+        font-family: monospace;
     }
     .header_mobile .mlogo_wrapper .mobile_logo {
         float: left;

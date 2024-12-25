@@ -16,12 +16,12 @@ export default function Header() {
                 <Link to="/">
                   <img
                     className="logo-static"
-                    src={`${process.env.PUBLIC_URL}/resources/images/core/humanix-logo.png`}
+                    src={`${process.env.PUBLIC_URL}/resources/images/core/humanix_logo.png`}
                     alt="Proskillhub"
                   />
                   <img
                     className="logo-scroll"
-                    src={`${process.env.PUBLIC_URL}/resources/images/core/humanix-logo.png`}
+                    src={`${process.env.PUBLIC_URL}/resources/images/core/humanix_logo.png`}
                     alt="Proskillhub"
                   />
                 </Link>
@@ -89,7 +89,7 @@ export default function Header() {
         <div className="mobile_logo">
           <Link to="/">
             <img
-              src={`${process.env.PUBLIC_URL}/resources/images/core/logo.png`}
+              src={`${process.env.PUBLIC_URL}/resources/images/core/humanix_logo.png`}
               alt="proskillhub"
             />
           </Link>

@@ -11,7 +11,7 @@ export default function Footer() {
     </div>
     <div className="container">
         <div className="footer-logo text-center">
-            <img src="resources/images/core/humanix-logo.png" className="attachment-large size-large" alt="" />
+            <img src="resources/images/core/humanix_logo.png" className="attachment-large size-large" alt="" />
         </div>
         <div className="flex-col">
             <div className="ft-col-contact text-center">
@@ -50,7 +50,7 @@ export default function Footer() {
         <p className="copyright text-center"> ©
             <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
             <script>new Date().getFullYear()  2010 && document.write("" + new Date().getFullYear());</script> All
-            Rights Reserved By <a href="https://proskillhub.com">Pro Skill Hub</a>
+            Rights Reserved By <a href="https://proskillhub.com">Humanix Technologies</a>
         </p>
         <div className="footer-social text-center">
             <a className="footer-social-icon facebook" href="https://www.facebook.com/proskillhub" target="_blank" rel="noopener noreferrer"><i
