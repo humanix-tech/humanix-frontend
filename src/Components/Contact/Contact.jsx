@@ -31,14 +31,14 @@ export default function Contact() {
               <i className="flaticon-world"></i>
               <div className="info-text">
                 <h6>Our Address:</h6>
-                <p>John Tower Rewa, Madhya Pradesh 486001</p>
+                <p>Shalimar swayam, bhangarh, Near, MR 10 Rd, Indore, Madhya Pradesh 453555</p>
               </div>
             </div>
             <div className="contact-info text-light m-b30">
               <i className="flaticon-note"></i>
               <div className="info-text">
                 <h6>Our mailbox:</h6>
-                <p><a href="mailto:info@proskillhub.com">info@proskillhub.com</a></p>
+                <p><a href="mailto:info@proskillhub.com">info@humanixtechnologies.com</a></p>
               </div>
             </div>
             <div className="contact-info text-light">
@@ -93,7 +93,7 @@ export default function Contact() {
   <section>
     <div className="map">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7258.507907751429!2d81.29543997509788!3d24.545884786813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39845bccd2ab47e3%3A0x7e238d1426daef7a!2sJohn%20Tower%20(AIRTEL%20CELL%20TOWER)%2C%20Narendra%20Nagar%2C%20Amaiya%20Colony%2C%20Rewa%2C%20Madhya%20Pradesh%20486001!5e0!3m2!1sen!2sin!4v1661945580030!5m2!1sen!2sin"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.8129781636103!2d75.87456877540382!3d22.77232087934997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd1c47d92e37%3A0x2f1b2d41363452e5!2sShalimar%20Swayam%20flat%20scheme!5e0!3m2!1sen!2sin!4v1735239592341!5m2!1sen!2sin"
         width="100%"
         height="500"
         style={{ border: 0 }}

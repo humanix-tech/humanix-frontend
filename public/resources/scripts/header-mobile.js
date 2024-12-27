@@ -71,6 +71,7 @@
 	$('.mobile_mainmenu li:has(ul)').prepend('<span class="arrow"><i class="flaticon-arrow-point-to-right"></i></span>');
 
 	$( "#mmenu_toggle" ).on('click', function() {
+		console.log("Working!!!")
 		$(this).toggleClass( "active" );
 		if ($(this).hasClass( "active" )) {
 			$('.mobile_nav').stop(true, true).slideDown();

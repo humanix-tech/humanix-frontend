@@ -8,11 +8,33 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Contact from './Components/Contact/Contact';
 import Team from './Components/Team/Team';
 import Process from './Components/Process/Process';
+import ItConsulting from './Components/IT-Consulting/ItConsulting';
+import PermanentITStaffing from './Components/Pemanent-IT-Staffing/PermanentITStaffing';
+import TemporaryITStaffing from './Components/Temporary-IT-staffing/TemporaryITStaffing';
+import StaffAugmentation from './Components/Staff-Augmentation/StaffAugmentation';
 
 function App() {
   return (
     <Router>
       <Header />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
@@ -20,6 +42,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/our-team" element={<Team />} />
         <Route path="/our-process" element={<Process />} />
+        <Route path="/IT-consulting" element={<ItConsulting />} />
+        <Route path="/Permanent-staffing" element={<PermanentITStaffing />} />
+        <Route path="/Temporary-staffing" element={<TemporaryITStaffing />} />
+        <Route path="/Staff-augmentation" element={<StaffAugmentation />} />
         {/* Add more routes as needed */}
       </Routes>
       <Footer />
@@ -28,3 +54,15 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+

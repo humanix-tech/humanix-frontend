@@ -195,7 +195,7 @@ export default function Main() {
                 <h2 className="main-heading m-b20">Grow with Humanix</h2>
               </div>
               <p className="m-b0 p-b45">
-              With exceptional analytical, strategic, and technical expertise, Humanix technologies offers talented on-demand developers who bring your ideas to life. Our developers and HR professionals quickly grasp your unique requirements and collaborate closely with your in-house team to ensure excellence at every stage. Having worked with a diverse portfolio, Codersbrain allows you the freedom to choose the best-fit resources by evaluating their skills and expertise to meet your specific needs.
+              With exceptional analytical, strategic, and technical expertise, Humanix technologies offers talented on-demand developers who bring your ideas to life. Our developers and HR professionals quickly grasp your unique requirements and collaborate closely with your in-house team to ensure excellence at every stage. Having worked with a diverse portfolio, Humanix Technologies allows you the freedom to choose the best-fit resources by evaluating their skills and expertise to meet your specific needs.
               </p>
               <p className="font22 text-dark">We focus on strong partnerships built with Trust, Honesty, Collaboration and Transparency.</p>
               <p className="m-b0 p-b45">

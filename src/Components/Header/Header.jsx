@@ -35,21 +35,21 @@ export default function Header() {
                   <li className="menu-item-has-children">
                     <Link to="#">Services</Link>
                     <ul className="sub-menu">
-                      <li><Link to="/frontend-development">IT Consulting</Link></li>
-                      <li><Link to="/backend-development">IT Staffing(Permanent)</Link></li>
-                      <li><Link to="/full-stack-developer">IT Staffing(Temporary)</Link></li>
-                      <li><Link to="/data-science">Staff Argumentaion</Link></li>
+                      <li><Link to="/IT-consulting">IT Consulting</Link></li>
+                      <li><Link to="/Permanent-staffing">IT Staffing(Permanent)</Link></li>
+                      <li><Link to="/Temporary-staffing">IT Staffing(Temporary)</Link></li>
+                      <li><Link to="/Staff-augmentation">Staff Argumentaion</Link></li>
                     </ul>
                   </li>
-                  <li className="menu-item-has-children">
+                  {/* <li className="menu-item-has-children">
                     <Link to="#">Hire Developer</Link>
                     <ul className="sub-menu">
                       <li><Link to="/our-team">Our Developers</Link></li>
                       <li><Link to="/our-process">Our Process</Link></li>
                       <li><Link to="/faq">FAQs</Link></li>
                     </ul>
-                  </li>
-                  <li><Link to="/portfolio-grid">Portfolio</Link></li>
+                  </li> */}
+                  {/* <li><Link to="/portfolio-grid">Portfolio</Link></li> */}
                   <li><Link to="/contact">Contacts</Link></li>
                 </ul>
               </nav>
@@ -96,7 +96,18 @@ export default function Header() {
         </div>
         <div className="octf-btn-cta"></div>
         <div id="mmenu_toggle">
-          <button></button>
+          <button 
+          onClick={()=>{
+            let mmenu = document.getElementById('mmenu_toggle');
+            if (mmenu.classList.contains( "active" )) {
+              mmenu.classList.remove( "active" );
+              document.querySelector('.mobile_nav').style.display = 'none'; 
+            }else{
+              mmenu.classList.add( "active" );
+              document.querySelector('.mobile_nav').style.display = 'block';
+            }
+          }}
+          ></button>
         </div>
       </div>
       <div className="mmenu_wrapper">
@@ -105,18 +116,14 @@ export default function Header() {
             <li className="current-menu-item"><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li className="menu-item-has-children">
-              <Link to="#">Courses</Link>
-              <ul className="sub-menu">
-                <li><Link to="/frontend-development">Frontend Development</Link></li>
-                <li><Link to="/backend-development">Backend Development</Link></li>
-                <li><Link to="/full-stack-developer">Full Stack Developer</Link></li>
-                <li><Link to="/data-science">Data Science</Link></li>
-                <li><Link to="/business-development">Business Development</Link></li>
-                <li><Link to="/digital-marketing">Digital Marketing</Link></li>
-                <li><Link to="/interview-preparation">Interview Preparation</Link></li>
-                <li><Link to="/soft-skills">Soft Skills</Link></li>
-              </ul>
-            </li>
+                    <Link to="#">Services</Link>
+                    <ul className="sub-menu">
+                      <li><Link to="/IT-consulting">IT Consulting</Link></li>
+                      <li><Link to="/Permanent-staffing">IT Staffing(Permanent)</Link></li>
+                      <li><Link to="/Temporary-staffing">IT Staffing(Temporary)</Link></li>
+                      <li><Link to="/Staff-augmentation">Staff Argumentaion</Link></li>
+                    </ul>
+                  </li>
             <li className="menu-item-has-children">
               <Link to="#">Hire Developer</Link>
               <ul className="sub-menu">

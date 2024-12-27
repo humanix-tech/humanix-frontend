@@ -37,7 +37,7 @@
             action: 'contact'
         }).then(function(token) {
             var recaptchaResponse = document.getElementById('recaptchaResponse');
-            recaptchaResponse.value = token;
+            recaptchaResponse?.value = token;
         });
     });
     $('.woocommerce-form-coupon-toggle .showcoupon').on("click", function(){
