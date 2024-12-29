@@ -1,7 +1,10 @@
 import React from 'react'
+import Header from '../Header/Header'
 
 export default function ItConsulting() {
   return (
+   <>
+    <Header isActive={"Services"}/>
     <div id="content" class="site-content">
         <div className="page-header dtable text-center" style={{ backgroundImage: 'url(resources/images/banner-.jpg)' }}>
             <div className="dcell">
@@ -393,5 +396,6 @@ Discover what we can achieve together—start today!.</div>
 </section> */}
 
     </div>
+   </>
   )
 }

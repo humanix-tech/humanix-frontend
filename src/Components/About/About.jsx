@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer'
 export default function About() {
   return (
     <>
+    <Header isActive={"About"}/>
     <div id="content" className="site-content">
   <div className="page-header dtable text-center" style={{ backgroundImage: 'url(resources/images/banner-.jpg)' }}>
     <div className="dcell">

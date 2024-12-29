@@ -16,25 +16,6 @@ import StaffAugmentation from './Components/Staff-Augmentation/StaffAugmentation
 function App() {
   return (
     <Router>
-      <Header />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />

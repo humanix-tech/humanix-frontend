@@ -1,7 +1,10 @@
 import React from 'react'
+import Header from '../Header/Header'
 
 export default function PermanentITStaffing() {
   return (
+      <>
+      <Header isActive={"Services"}/>
     <div id="content" class="site-content">
         <div className="page-header dtable text-center" style={{ backgroundImage: 'url(resources/images/banner-.jpg)' }}>
    <div className="dcell">
@@ -341,5 +344,6 @@ Discover how our permanent staffing solutions can enhance your team—start toda
    </div>
 </section> */}
     </div>
+    </>
   )
 }

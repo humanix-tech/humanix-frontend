@@ -2716,10 +2716,23 @@ a:hover, a:active {
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
+    
     .header_mobile .mobile_nav {
         display: none;
-        background: #fff;
+        padding: 14px 20px;
+        color: #ffffff;
+        font-weight: 600;
+        background: linear-gradient(135deg, #6a11cb, #06e9df);
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        /* transition: all 0.3s ease; */
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
+
+
     .header_mobile .mobile_nav .mobile_mainmenu {
         margin: 0;
         padding: 0;
@@ -2740,10 +2753,13 @@ a:hover, a:active {
     .header_mobile .mobile_nav .mobile_mainmenu li a {
         padding: 9px 0;
         display: block;
-        color: #1a1b1e;
-        font-weight: 500;
+        color: #f7f8fd;
+        font-weight: bold;
         border-bottom: 1px solid #e5e5e5;
+        font-family: sans-serif;
     }
+
+
     .header_mobile .mobile_nav .mobile_mainmenu > li:last-child > a {
         border: none;
     }
@@ -2768,7 +2784,7 @@ a:hover, a:active {
         box-sizing: border-box;
     }
     .header_mobile .mobile_nav .mobile_mainmenu > li.menu-item-has-children .arrow i {
-        color: #9397a7;
+        color: #f2f3f7;
         display: inline-block;
         line-height: 1;
         -webkit-transition: transform 0.3s ease-in-out;
@@ -2785,15 +2801,55 @@ a:hover, a:active {
         transform: rotate(90deg);
     }
     .header_mobile .mobile_nav .mobile_mainmenu > li > a:hover, .header_mobile .mobile_nav .mobile_mainmenu > li.current-menu-item > a, .header_mobile .mobile_nav .mobile_mainmenu > li.current-menu-ancestor > a {
-        color: #fe4c1c;
+        
+
+    color: #ffffff; /* Active text color */
+    background: linear-gradient(90deg, #fe4c1c 0%, #ff8c00 100%); /* Gradient background */
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+    font-weight: bold; /* Highlight active tab with bold text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: all 0.3s ease; 
+    }
+
+    .footer-logo img {
+        width: 62%;
+        max-width: 100%;
+        height: auto;
+    }
+    .contact-info .info-text {
+        padding-left: 50px;
+        font-size: medium;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+
+    .about-mobile{
+        text-align: justify;
     }
 }
 @media only screen and (max-width: 767px) {
+    .contact-info .info-text {
+        padding-left: 50px;
+        font-size: medium;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
     .header_mobile .mlogo_wrapper {
         width: 100%;
     }
+    .footer-logo img {
+        width: 62%;
+        max-width: 100%;
+        height: auto;
+    }
 }
 @media only screen and (max-width: 320px) {
+    .footer-logo img {
+        width: 62%;
+        max-width: 100%;
+        height: auto;
+    }
     .mobile_logo img {
         max-width: 230px;
         max-height: 47px;
@@ -7346,10 +7402,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     -moz-transition: all .3s linear;
     -o-transition: all .3s linear;
     -ms-transition: all .3s linear;
-    transition: all .3s linear;
-
-
-   
+    transition: all .3s linear;   
 }
 .our-team-logo{
     height: 15vh;

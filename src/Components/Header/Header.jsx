@@ -1,7 +1,124 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
+import "jquery-ui-dist/jquery-ui"
+import { useEffect } from 'react';
+export default function Header({isActive}) {
+console.log("isActive",isActive)
+  useEffect(()=>{
+    (function($) {
 
-export default function Header() {
+      /* ========================================== 
+    Sticky Header 1
+    ========================================== */
+    $(window).on("scroll", function(){
+      if ( $( '#site-header' ).hasClass( "sticky-header" ) ) {
+        var site_header = $('#site-header').outerHeight() + 30;	
+        
+          if ($(window).scrollTop() >= site_header) {	    	
+              $('.sticky-header .octf-main-header, .mobile-header-sticky .header_mobile').addClass('is-stuck');	        
+          }else {
+              $('.sticky-header .octf-main-header, .mobile-header-sticky .header_mobile').removeClass('is-stuck');		              
+          }
+      }
+    });
+  
+    /* ========================================== 
+    Sticky Header 2
+    ========================================== */
+    if ($('.cd-header').length) {
+      //if you change this breakpoint in the style.css file, don't forget to update this value as well
+      var MQL = 1170;
+  
+      //primary navigation slide-in effect
+      if($(window).width() > MQL) {
+        var headerHeight = $('.cd-header').height();
+        $(window).on('scroll',
+        {
+              previousTop: 0
+          }, 
+          function () {
+            var currentTop = $(window).scrollTop();
+            //check if user is scrolling up
+            if (currentTop < this.previousTop ) {
+              //if scrolling up...
+              if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
+                $('.cd-header').addClass('is-visible');
+              } else {
+                $('.cd-header').removeClass('is-visible is-fixed');
+              }
+            } else {
+              //if scrolling down...
+              $('.cd-header').removeClass('is-visible');
+              if( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed')) $('.cd-header').addClass('is-fixed');
+            }
+            this.previousTop = currentTop;
+        });
+      };
+    }
+  
+    /* ========================================== 
+    Search on Header
+    ========================================== */
+    $('.toggle_search').on("click", function(){
+      $(this).toggleClass( "active" );
+          $('.h-search-form-field').toggleClass('show');
+          if ($(this).find('i').hasClass( "flaticon-search" )) {
+             $('.toggle_search > i').removeClass( "flaticon-search" ).addClass("flaticon-delete");
+          }else{
+             $('.toggle_search > i').removeClass( "flaticon-delete" ).addClass("flaticon-search");
+          }
+          $('.h-search-form-inner > form > input.search-field').focus();
+      });
+  
+      /* ========================================== 
+    Header Mobile
+    ========================================== */
+    /* mobile_mainmenu create span */
+    $('.mobile_mainmenu li:has(ul)').prepend('<span class="arrow"><i class="flaticon-arrow-point-to-right"></i></span>');
+  
+    $( "#mmenu_toggle" ).on('click', function() {
+      console.log("Working!!!")
+      $(this).toggleClass( "active" );
+      if ($(this).hasClass( "active" )) {
+        $('.mobile_nav').stop(true, true).slideDown();
+      }else{
+        $('.mobile_nav').stop(true, true).slideUp();
+      }		
+    });
+  
+    $(".mobile_mainmenu > li span.arrow").click(function() {
+          $(this).parent().find("> ul").stop(true, true).slideToggle()
+          $(this).toggleClass( "active" ); 
+      });
+  
+    /* ========================================== 
+    Back To Top
+    ========================================== */
+      if ($('#back-to-top').length) {
+        var scrollTrigger = 500, // px
+            backToTop = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#back-to-top').addClass('show');
+                } else {
+                    $('#back-to-top').removeClass('show');
+                }
+            };
+        backToTop();
+        $(window).on('scroll', function () {
+            backToTop();
+        });
+        $('#back-to-top').on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });	
+      };
+  
+  })($);
+  },[])
   return (
     <div>
 
@@ -30,9 +147,9 @@ export default function Header() {
             <div className="octf-col">
               <nav id="site-navigation" className="main-navigation">
                 <ul id="primary-menu" className="menu">
-                  <li className="current-menu-item"><Link to="/">Home</Link></li>
-                  <li><Link to="/about">About Us</Link></li>
-                  <li className="menu-item-has-children">
+                  <li className={isActive === "Home" ? "current-menu-item":"" }><Link to="/">Home</Link></li>
+                  <li className={isActive === "About" ? "current-menu-item":"" }><Link to="/about">About Us</Link></li>
+                  <li className={isActive === "Services" ? "menu-item-has-children current-menu-item" : "menu-item-has-children" }>
                     <Link to="#">Services</Link>
                     <ul className="sub-menu">
                       <li><Link to="/IT-consulting">IT Consulting</Link></li>
@@ -50,7 +167,7 @@ export default function Header() {
                     </ul>
                   </li> */}
                   {/* <li><Link to="/portfolio-grid">Portfolio</Link></li> */}
-                  <li><Link to="/contact">Contacts</Link></li>
+                  <li className={isActive === "contacts" ? "current-menu-item":"" }><Link to="/contact">Contacts</Link></li>
                 </ul>
               </nav>
             </div>
@@ -96,26 +213,15 @@ export default function Header() {
         </div>
         <div className="octf-btn-cta"></div>
         <div id="mmenu_toggle">
-          <button 
-          onClick={()=>{
-            let mmenu = document.getElementById('mmenu_toggle');
-            if (mmenu.classList.contains( "active" )) {
-              mmenu.classList.remove( "active" );
-              document.querySelector('.mobile_nav').style.display = 'none'; 
-            }else{
-              mmenu.classList.add( "active" );
-              document.querySelector('.mobile_nav').style.display = 'block';
-            }
-          }}
-          ></button>
+          <button></button>
         </div>
       </div>
       <div className="mmenu_wrapper">
         <div className="mobile_nav">
           <ul id="menu-main-menu" className="mobile_mainmenu">
-            <li className="current-menu-item"><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li className="menu-item-has-children">
+            <li className={isActive === "Home" ? "current-menu-item":"" }><Link to="/">Home</Link></li>
+            <li className={isActive === "About" ? "current-menu-item":"" }><Link to="/about">About Us</Link></li>
+            <li className={isActive === "Services" ? "menu-item-has-children current-menu-item" : "menu-item-has-children" }>
                     <Link to="#">Services</Link>
                     <ul className="sub-menu">
                       <li><Link to="/IT-consulting">IT Consulting</Link></li>
@@ -124,7 +230,7 @@ export default function Header() {
                       <li><Link to="/Staff-augmentation">Staff Argumentaion</Link></li>
                     </ul>
                   </li>
-            <li className="menu-item-has-children">
+            {/* <li className="menu-item-has-children">
               <Link to="#">Hire Developer</Link>
               <ul className="sub-menu">
                 <li><Link to="/our-team">Our Developers</Link></li>
@@ -132,8 +238,8 @@ export default function Header() {
                 <li><Link to="/faq">FAQs</Link></li>
               </ul>
             </li>
-            <li><Link to="/portfolio-grid">Portfolio</Link></li>
-            <li><Link to="/contact">Contacts</Link></li>
+            <li><Link to="/portfolio-grid">Portfolio</Link></li> */}
+            <li className={isActive === "contacts" ? "current-menu-item":"" }><Link to="/contact">Contacts</Link></li>
           </ul>
         </div>
       </div>

@@ -1,8 +1,10 @@
 import React from 'react'
+import Header from '../Header/Header';
 
 export default function Contact() {
   return (
     <>
+    <Header isActive={"contacts"} />
     <div id="content" className="site-content">
   <div className="page-header dtable text-center" style={{ backgroundImage: "url(resources/images/banner-.jpg)" }}>
     <div className="dcell">

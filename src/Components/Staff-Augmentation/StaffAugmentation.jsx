@@ -1,7 +1,10 @@
 import React from 'react'
+import Header from '../Header/Header'
 
 export default function StaffAugmentation() {
   return (
+    <>
+    <Header isActive={"Services"}/>
    <div id="content" class="site-content">
       <div className="page-header dtable text-center" style={{ backgroundImage: 'url(resources/images/banner-.jpg)' }}>
    <div className="dcell">
@@ -425,5 +428,6 @@ Discover how our IT staff augmentation services can elevate your team—start to
 </section> */}
 
     </div>
+    </>
   )
 }

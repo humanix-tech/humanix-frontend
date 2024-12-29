@@ -38,15 +38,6 @@ export default function Footer() {
             </div>
         </div>
         <hr />
-        <div className="footer-menu">
-            <ul id="menu-footer-menu" className="menu">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-        </div>
         <p className="copyright text-center"> ©
             <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
             <script>new Date().getFullYear()  2010 && document.write("" + new Date().getFullYear());</script> All

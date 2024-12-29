@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
+import Header from '../Header/Header';
 
 
 export default function Main() {
@@ -10,7 +11,9 @@ export default function Main() {
     'node.png','rails.png','react.png','js.png','java.png','net_logo.svg.png','angular.png','python.png'];
 
   return (
-  <div id="content" className="site-content">
+  <>
+    <Header isActive={"Home"}/>
+    <div id="content" className="site-content">
     <section className="banner big-padding-top bg-banner-gradient particles-js" data-color="#ffffff, #00c3ff, #fe4c1c" data-id="i1">
       <div className="bg-overlay-1"></div>
       <div className="shape shape-bottom" data-negative="true">
@@ -194,11 +197,11 @@ export default function Main() {
               <div className="ot-heading left-align">
                 <h2 className="main-heading m-b20">Grow with Humanix</h2>
               </div>
-              <p className="m-b0 p-b45">
+              <p className="m-b0 p-b45 about-mobile">
               With exceptional analytical, strategic, and technical expertise, Humanix technologies offers talented on-demand developers who bring your ideas to life. Our developers and HR professionals quickly grasp your unique requirements and collaborate closely with your in-house team to ensure excellence at every stage. Having worked with a diverse portfolio, Humanix Technologies allows you the freedom to choose the best-fit resources by evaluating their skills and expertise to meet your specific needs.
               </p>
               <p className="font22 text-dark">We focus on strong partnerships built with Trust, Honesty, Collaboration and Transparency.</p>
-              <p className="m-b0 p-b45">
+              <p className="m-b0 p-b45 about-mobile">
               Humanix Technologies prioritizes client needs, consistently aiming to not only meet but exceed expectations. We continuously assess our current initiatives to inform future strategies, proactively anticipating and addressing client requirements before they emerge.
               </p>
               <div className="ot-button">
@@ -431,7 +434,7 @@ export default function Main() {
             <div className="col-md-4 col-xs-12 align-self-center">
                 <div className="ot-heading heading-testimonials left-align">
                     <h6><span>Testimonials</span></h6>
-                    <h2 className="main-heading">What They<br />Say About Our<br />Company?</h2>
+                    <h2 className="main-heading">What They<br /> Say About Our<br />Company?</h2>
                 </div>
             </div>
             <div className="col-md-8 col-xs-12">
@@ -537,7 +540,8 @@ export default function Main() {
     </div>
 </section>
 
-  </div>
+    </div>
+  </>
   )
 }
 
