@@ -44,11 +44,11 @@ export default function Footer() {
             Rights Reserved By <a href="https://proskillhub.com">Humanix Technologies</a>
         </p>
         <div className="footer-social text-center">
-            <a className="footer-social-icon facebook" href="https://www.facebook.com/proskillhub" target="_blank" rel="noopener noreferrer"><i
+            <a className="footer-social-icon facebook" href="https://www.facebook.com/people/Humanix-Technologies/61571338016835/" target="_blank" rel="noopener noreferrer"><i
                     className="fab fa-facebook-f"></i></a>
-            <a className="footer-social-icon linkedin" href="https://www.linkedin.com/company/proskillhub/"
+            <a className="footer-social-icon linkedin" href="https://www.linkedin.com/company/humanix-technologies"
                 target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-            <a className="footer-social-icon instagram" href="https://www.instagram.com/proskillhub/" target="_blank" rel="noopener noreferrer"><i
+            <a className="footer-social-icon instagram" href="https://www.instagram.com/humanixtechnologies/" target="_blank" rel="noopener noreferrer"><i
                     className="fab fa-instagram"></i></a>
         </div>
     </div>
